@@ -50,7 +50,16 @@ export function caesarCipher(str, shift) {
 }
 
 export function analyzeArray(arr) {
-    if (typeof arr === "object") {
-        
+    if (!Array.isArray(arr)) {
+        return arr;
+    }
+
+    arr.sort(function(a, b){return a-b});
+
+    return {
+        average: arr.length !== 0 ? arr.reduce((a, b) => a + b, 0) / arr.length : 0,
+        min: arr[0],
+        max: arr[arr.length - 1],
+        length: arr.length
     }
 }
