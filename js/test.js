@@ -26,7 +26,7 @@ test('Calculator', () => {
 test('Caesar Cipher', () => {
   expect(caesarCipher('xyz', 3)).toBe('abc');
   expect(caesarCipher('abc', -3)).toBe('xyz');
-  expect(caesarCipher('HeLLo', 3)).toBe('KhoOr');
+  expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
   expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
   expect(caesarCipher('', 3)).toBe('');
   expect(caesarCipher(null, 3)).toBeNull();
