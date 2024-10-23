@@ -25,3 +25,32 @@ export const calculator = {
       return a / b;
     }
 }
+
+export function caesarCipher(str, shift) {
+    if (typeof str !== "string") {
+        return str;
+    }
+
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (char.match(/[a-zA-Z]/)) {
+            let code = str.charCodeAt(i);
+            if (code >= 65 && code <= 90) {
+                code = (((code - 65) + shift + 26) % 26) + 65; // Handle negative shifts
+            } else if (code >= 97 && code <= 122) {
+                code = (((code - 97) + shift + 26) % 26) + 97; // Handle negative shifts
+            }
+            result += String.fromCharCode(code);
+        } else {
+            result += char;
+        }
+    }
+    return result;
+}
+
+export function analyzeArray(arr) {
+    if (typeof arr === "object") {
+        
+    }
+}
