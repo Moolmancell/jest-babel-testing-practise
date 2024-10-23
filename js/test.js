@@ -34,12 +34,19 @@ test('Caesar Cipher', () => {
 });
 
 test('Analyze Array', () => {
-  const arr = [1, 2, 3, 4, 5];
+  let arr = [1, 2, 3, 4, 5];
   expect(analyzeArray(arr)).toEqual({
     average: 3,
     min: 1,
     max: 5,
     length: 5
+  });
+  arr = [1,8,3,4,2,6];
+  expect(analyzeArray(arr)).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6
   });
   expect(analyzeArray([])).toEqual({average:0, min: undefined, max: undefined, length: 0});
   expect(analyzeArray(null)).toBeNull();
