@@ -18,11 +18,3 @@ The following algorithms are currently implemented:
 ```
 npm run test
 ```
-
-## Contributing
-
-Contributions are welcome! If you find any bugs or want to add new algorithms, feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
